@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3652463B-B490-47EC-AB38-B70EFF219FFC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "3AC6EB62-7156-4307-AE91-4D41F9A1F259"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "[NSIBObjectData nibInstantiateWithOwner:options:topLevelObjects:]"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "3AC6EB62-7156-4307-AE91-4D41F9A1F259 - fc0e485ebe94d95c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NSIBObjectData nibInstantiateWithOwner:options:topLevelObjects:]"
+                  moduleName = "AppKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

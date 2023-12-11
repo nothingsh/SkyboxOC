@@ -6,6 +6,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SBRenderer.h"
+@import MetalKit;
+@import CoreGraphics;
 
 @interface ViewController : NSViewController
 

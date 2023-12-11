@@ -12,6 +12,11 @@
 		56DF47212B2552970030D2B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56DF47202B2552970030D2B5 /* Assets.xcassets */; };
 		56DF47242B2552970030D2B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56DF47222B2552970030D2B5 /* Main.storyboard */; };
 		56DF47262B2552970030D2B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DF47252B2552970030D2B5 /* main.m */; };
+		56DF47312B2554090030D2B5 /* SBCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DF47302B2554090030D2B5 /* SBCamera.m */; };
+		56DF47352B255FEF0030D2B5 /* LinearAlgebra.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DF47342B255FEF0030D2B5 /* LinearAlgebra.m */; };
+		56DF47382B2569BD0030D2B5 /* sbShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 56DF47372B2569BD0030D2B5 /* sbShaders.metal */; };
+		56DF473B2B256A330030D2B5 /* SBRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DF473A2B256A330030D2B5 /* SBRenderer.m */; };
+		56DF473F2B2575B10030D2B5 /* SBSkyboxTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DF473E2B2575B10030D2B5 /* SBSkyboxTexture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,16 @@
 		56DF47232B2552970030D2B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56DF47252B2552970030D2B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56DF47272B2552970030D2B5 /* SkyboxOC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyboxOC.entitlements; sourceTree = "<group>"; };
+		56DF472F2B2553F10030D2B5 /* SBCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBCamera.h; sourceTree = "<group>"; };
+		56DF47302B2554090030D2B5 /* SBCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBCamera.m; sourceTree = "<group>"; };
+		56DF47332B255FE50030D2B5 /* LinearAlgebra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearAlgebra.h; sourceTree = "<group>"; };
+		56DF47342B255FEF0030D2B5 /* LinearAlgebra.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinearAlgebra.m; sourceTree = "<group>"; };
+		56DF47362B25694D0030D2B5 /* SBShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBShaderTypes.h; sourceTree = "<group>"; };
+		56DF47372B2569BD0030D2B5 /* sbShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = sbShaders.metal; sourceTree = "<group>"; };
+		56DF47392B256A250030D2B5 /* SBRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBRenderer.h; sourceTree = "<group>"; };
+		56DF473A2B256A330030D2B5 /* SBRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBRenderer.m; sourceTree = "<group>"; };
+		56DF473D2B2575A80030D2B5 /* SBSkyboxTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBSkyboxTexture.h; sourceTree = "<group>"; };
+		56DF473E2B2575B10030D2B5 /* SBSkyboxTexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBSkyboxTexture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +55,7 @@
 		56DF470E2B2552950030D2B5 = {
 			isa = PBXGroup;
 			children = (
+				56DF472D2B2552C50030D2B5 /* Renderer */,
 				56DF47192B2552950030D2B5 /* SkyboxOC */,
 				56DF47182B2552950030D2B5 /* Products */,
 			);
@@ -66,6 +82,47 @@
 				56DF47272B2552970030D2B5 /* SkyboxOC.entitlements */,
 			);
 			path = SkyboxOC;
+			sourceTree = "<group>";
+		};
+		56DF472D2B2552C50030D2B5 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				56DF473C2B2575750030D2B5 /* SkyboxTexture */,
+				56DF47322B255FCC0030D2B5 /* Utility */,
+				56DF472E2B2553C30030D2B5 /* Model */,
+				56DF47362B25694D0030D2B5 /* SBShaderTypes.h */,
+				56DF47372B2569BD0030D2B5 /* sbShaders.metal */,
+				56DF47392B256A250030D2B5 /* SBRenderer.h */,
+				56DF473A2B256A330030D2B5 /* SBRenderer.m */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		56DF472E2B2553C30030D2B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56DF472F2B2553F10030D2B5 /* SBCamera.h */,
+				56DF47302B2554090030D2B5 /* SBCamera.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56DF47322B255FCC0030D2B5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				56DF47332B255FE50030D2B5 /* LinearAlgebra.h */,
+				56DF47342B255FEF0030D2B5 /* LinearAlgebra.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		56DF473C2B2575750030D2B5 /* SkyboxTexture */ = {
+			isa = PBXGroup;
+			children = (
+				56DF473D2B2575A80030D2B5 /* SBSkyboxTexture.h */,
+				56DF473E2B2575B10030D2B5 /* SBSkyboxTexture.m */,
+			);
+			path = SkyboxTexture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +196,12 @@
 			files = (
 				56DF471F2B2552950030D2B5 /* ViewController.m in Sources */,
 				56DF47262B2552970030D2B5 /* main.m in Sources */,
+				56DF473F2B2575B10030D2B5 /* SBSkyboxTexture.m in Sources */,
+				56DF473B2B256A330030D2B5 /* SBRenderer.m in Sources */,
 				56DF471C2B2552950030D2B5 /* AppDelegate.m in Sources */,
+				56DF47382B2569BD0030D2B5 /* sbShaders.metal in Sources */,
+				56DF47352B255FEF0030D2B5 /* LinearAlgebra.m in Sources */,
+				56DF47312B2554090030D2B5 /* SBCamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +340,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SkyboxOC/SkyboxOC.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7838455AJ2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -302,9 +366,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SkyboxOC/SkyboxOC.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7838455AJ2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
